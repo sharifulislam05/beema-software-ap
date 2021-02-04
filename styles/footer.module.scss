@@ -1,0 +1,69 @@
+$white-text: #ffffff;
+$secondary-color: #00d8b1;
+
+@mixin text-formatter($text, $fw, $fs, $lh, $ls) {
+  color: $text;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+.footer__container {
+  background: url("../static/images/Rectangle\ 7.png");
+  margin-top: 2rem;
+}
+
+.footer__body {
+  text-align: center;
+}
+
+.footer__body_logo {
+  @include text-formatter($secondary-color, 900, 35px, 25px, 0.01em);
+  padding: 1.5rem 0px;
+}
+
+.footer__body_text {
+  @include text-formatter($white-text, 500, 42px, 49px, 0.01em);
+  text-align: center;
+  padding: 1.5rem 0px;
+}
+
+.footer__body_btn {
+  @include text-formatter($white-text, 700, 22px, 26px, 0.01em);
+  width: 223px;
+  height: 48px;
+  background: $secondary-color;
+  border-radius: 5px;
+  outline: none !important;
+  border: none;
+  margin-bottom: 3rem;
+  &:hover {
+    background: rgba(0, 185, 151, 0.8);
+  }
+}
+
+.footer__item_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 5rem;
+  border-top: 1px solid $white-text;
+  padding-top: 1rem;
+  color: $white-text;
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      @include text-formatter($white-text, 500, 13px, 15px, 0.04em);
+      margin-right: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+.footer__icon {
+  margin-right: 1rem;
+}

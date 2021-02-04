@@ -1,0 +1,53 @@
+$quality-head: #262626;
+$secondary-text: #7a7a7a;
+
+@mixin text-formatter($text, $fw, $fs, $lh) {
+  color: $text;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+%shared-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: $secondary-text;
+}
+
+.quality__head {
+  @include text-formatter($quality-head, 700, 45px, 53px);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+.quality__card_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.quality_card_head {
+  @include text-formatter($quality-head, 500, 40px, 47px);
+  text-align: center;
+}
+
+.quality__card_body {
+  @extend %shared-text;
+  width: 601px;
+  height: 105px;
+}
+
+.quality__card_img {
+  width: 438px;
+  height: 301px;
+}
+
+.quality__card_priority {
+  @extend %shared-text;
+  width: 709px;
+  height: 105px;
+}

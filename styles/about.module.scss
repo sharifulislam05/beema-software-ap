@@ -1,0 +1,44 @@
+.about__header {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+  text-align: center;
+  color: #323232;
+  margin: 80px 0px;
+}
+
+.feedbacks__container {
+  display: flex;
+  justify-content: center;
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 456px;
+  height: 522px;
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin: 3rem;
+  padding: 1rem;
+}
+
+.comments {
+  width: 426px;
+  height: 116px;
+  text-align: justify;
+  font-size: 20px;
+  color: #585858;
+  margin-top: 100px;
+}
+
+.feedback__footer {
+  display: flex;
+  border-top: 1px solid #cdcdcd;
+  padding-top: 1rem;
+  p {
+    padding: 1rem;
+  }
+}

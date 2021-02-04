@@ -1,0 +1,90 @@
+$white-text: #ffffff;
+$secondary-color: #00d8b1;
+
+@mixin text-formatter($text, $fw, $fs, $lh) {
+  color: $text;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(53, 53, 53, 0.88),
+      rgba(53, 53, 53, 0.88)
+    ),
+    url(/static/images/headerBg.png);
+}
+
+.navbar ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar__logo {
+  display: flex;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.navbar__logo_text {
+  @include text-formatter($white-text, 500, 1.6rem, null);
+  text-decoration: none !important;
+  margin-top: 0.7rem;
+}
+
+.navbar__btn_start {
+  @include text-formatter($white-text, 700, 1rem, 1.2rem);
+  width: 107px;
+  height: 32px;
+  background: $secondary-color;
+  border-radius: 5px;
+  border: none;
+  outline: none !important;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.navbar__btn_start:hover {
+  background: rgba(0, 185, 151, 0.8);
+}
+
+.navbar__btn_login {
+  @include text-formatter($white-text, 500, 1rem, 1.2rem);
+  margin: 1.3rem;
+}
+
+.header__main {
+  text-align: center;
+  color: $white-text;
+  margin-top: 3rem;
+}
+
+.header__main_logo_text {
+  color: $secondary-color;
+  margin-bottom: 2rem;
+}
+
+.header__main_text {
+  @include text-formatter($white-text, 500, 2.5rem, 2.9rem);
+  margin: 3rem 0px;
+}
+
+.header__main_btn {
+  width: 223px;
+  height: 48px;
+  background: $secondary-color;
+  border-radius: 5px;
+  border: none;
+  outline: none !important;
+  color: $white-text;
+}
+
+.header__main_btn:hover {
+  background: rgba(0, 185, 151, 0.8);
+}
